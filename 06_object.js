@@ -52,3 +52,28 @@ console.log(typeof user)
 user.login()
 user.logout()
 user.goodWorks()
+
+// 2. Math Object
+console.log(Math)
+console.log(Math.PI)
+
+const sum = 9.7
+console.log(Math.round(sum))
+console.log(Math.floor(sum))
+console.log(Math.ceil(sum))
+console.log(parseInt(sum))
+
+// random number
+const num = Math.random()
+console.log(num)
+
+// 0 ~ 9 사이의 정수출력
+console.log(Math.floor(Math.random() * 10))
+
+// 1 ~ 10 사이의 정수출력
+console.log(Math.floor(Math.random() * 10) + 1)
+
+// 배열 랜덤 출력
+const food = ['라면', '김밥', '우동']
+const randomNum = Math.floor(Math.random() * food.length)
+console.log(food[randomNum])
