@@ -29,4 +29,71 @@ class Car {
 
 const myCar = new Car('sonata', 'white')
 
-console.log(myCar)
+console.log(myCar.name)
+console.log(myCar.color)
+myCar.start()
+myCar.stop()
+
+const oldCar = new Car('pony', 'red')
+console.log(oldCar.name)
+console.log(oldCar.color)
+oldCar.start()
+oldCar.stop()
+
+// 2. Getter and Setter
+class Person {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  get age() {
+    return this._age
+  }
+
+  set age(value) {
+    this._age = value < 0 ? 0 : value
+  }
+}
+
+const boy = new Person('Jonh', -10)
+console.log(boy.name)
+console.log(boy.age)
+
+// 3. 상속과 다양성
+// extends
+
+class Phone {
+  constructor(name, screen, color) {
+    this.name = name
+    this.screen = screen
+    this.color = color
+  }
+
+  on() {
+    console.log(`${this.name} is turn on!!!!!!`)
+  }
+
+  off() {
+    console.log(`${this.name} is turn off~~~~~`)
+  }
+}
+
+class Samsung extends Phone {}
+const galaxy = new Samsung('Galaxy 10', 'led', 'white')
+galaxy.on()
+galaxy.off()
+
+class Apple extends Phone {
+  on() {
+    super.on()
+    console.log('아이폰이 켜졌습니다.')
+  }
+
+  off() {
+    console.log('아이폰이 꺼짐.')
+  }
+}
+const iphone = new Apple('iphone X', 'lcd', 'gray')
+iphone.on()
+iphone.off()
