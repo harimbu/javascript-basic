@@ -71,3 +71,10 @@ console.log(books)
 const books2 = ['git', 'nodejs']
 const newBook = books.concat(books2)
 console.log(newBook)
+
+// 5. 검색
+console.clear()
+console.log(books)
+console.log(books.indexOf('react'))
+console.log(books.includes('css'))
+console.log(books.includes('github'))
