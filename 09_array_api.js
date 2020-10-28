@@ -60,16 +60,58 @@ const sojus = [
   new Soju('참이슬', 1250, true, 46)
 ]
 
+console.clear()
+
 // 5. score가 80인 소주를 찾기
+{
+  const result = sojus.find(soju => soju.score === 80)
+  console.log(result)
+}
 
 // 6. 판매중인 소주를 찾아서 새로운 배열로 만들기
+{
+  const result = sojus.filter(item => !item.sale)
+  console.log(result)
+}
 
 // 7. 점수(score)만 있는 새로운 배열 만들기
+{
+  const result = sojus.map(soju => soju.score)
+  console.log(result)
+}
 
 // 8. 점수가 50보다 작은 소주가 있는지 확인하기
+{
+  const result = sojus.some(soju => soju.score < 30)
+  console.log(result)
+}
 
 // 9. 소주들의 평균 가격을 계산하기
+{
+  const result = sojus.reduce((a, b) => {
+    return a + b.price
+  }, 0)
+  console.log(result / sojus.length)
+}
 
 // 10. 점수를 문자로 만들기
+{
+  const result = sojus //
+    .map(soju => soju.score)
+    .join('/')
+
+  console.log(result)
+}
 
 // 11. 점수가 낮은 순으로, 문자열로 정렬하기
+{
+  const result = sojus //
+    .map(soju => soju.score)
+    .sort((a, b) => b - a)
+    .join()
+
+  console.log(result)
+}
+
+// 비동기 통신 - > callback, primise, async await
+// 클로즈
