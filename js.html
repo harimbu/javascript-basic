@@ -6,20 +6,34 @@
     <title>JS</title>
   </head>
   <body>
-    <button id="btn">클릭</button>
+    <form class="form">
+      <input type="text" placeholder="검색어입력" />
+    </form>
+
+    <h2 class="word"></h2>
 
     <script>
-      let btn = document.querySelector('#btn')
-      let i = 0
+      const form = document.querySelector('.form')
+      const input = form.querySelector('input')
+      const word = document.querySelector('.word')
 
-      let timer = setInterval(function () {
-        i++
-        console.log(i)
-      }, 1000)
+      function searchValue(text) {
+        console.log(text)
+      }
 
-      btn.addEventListener('click', function () {
-        clearInterval(timer)
-      })
+      function handleSubmit(e) {
+        e.preventDefault()
+        const say = input.value
+        word.textContent = say
+        searchValue(say)
+        input.value = ''
+      }
+
+      function init() {
+        form.addEventListener('submit', handleSubmit)
+      }
+
+      init()
     </script>
   </body>
 </html>

@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background: cadetblue;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  /* background: cornsilk; */
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  height: 80px;
+  display: block;
+  line-height: 80px;
+  padding: 0 30px;
+}
+
+.logo {
+  margin-right: auto;
+}
