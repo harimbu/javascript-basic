@@ -1,0 +1,4 @@
+.bg {
+  height: 100vh;
+  background: url('https://picsum.photos/1600/900') no-repeat center / cover;
+}
