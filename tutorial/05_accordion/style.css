@@ -34,6 +34,21 @@ h1 {
   background: #4183b9;
   color: #fff;
   cursor: pointer;
+  position: relative;
+}
+
+.accordion .content h2::after {
+  font-family: 'xeicon';
+  content: '\e9c5';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+}
+
+.accordion .content.active h2::after {
+  font-family: 'xeicon';
+  content: '\e9c1';
 }
 
 .accordion .content .text {
@@ -41,6 +56,7 @@ h1 {
   background: #fff;
   height: 0;
   overflow: hidden;
+  transition: height 0.3s, padding 0.3s;
 }
 
 .accordion .content.active .text {
