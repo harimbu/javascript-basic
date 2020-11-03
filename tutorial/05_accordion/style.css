@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #dfdec4;
+}
+
+h1 {
+  text-align: center;
+  margin: 3rem;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion .content {
+  margin: 10px 20px;
+}
+
+.accordion .content h2 {
+  padding: 1rem;
+  background: #4183b9;
+  color: #fff;
+  cursor: pointer;
+}
+
+.accordion .content .text {
+  padding: 0 10px;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+}
+
+.accordion .content.active .text {
+  padding: 20px 10px;
+  height: 100px;
+}
