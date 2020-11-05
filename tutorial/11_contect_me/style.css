@@ -59,7 +59,8 @@
   padding-bottom: 10px;
 }
 
-.gform input {
+.gform input,
+.gform textarea {
   display: block;
   width: 100%;
   padding: 18px;
@@ -70,4 +71,76 @@
   border-radius: 10px;
   outline: none;
   color: #99a9af;
+}
+
+.gform input::placeholder,
+.gform textarea::placeholder {
+  color: #b5c5c5;
+}
+
+.gform input:focus,
+.gform textarea:focus {
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+}
+
+.gform textarea {
+  resize: vertical;
+}
+
+.btn {
+  background: #3c8271;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.close {
+  background: #8d496b;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* dimm, modal */
+.dimm {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal span {
+  display: block;
+  font-size: 60px;
+}
+
+.modal p {
+  padding: 20px;
+}
+
+.container.active .dimm {
+  display: block;
+}
+
+.container.active .modal {
+  opacity: 1;
+  pointer-events: initial;
 }
