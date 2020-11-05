@@ -59,6 +59,12 @@ function sendMail() {
     var formData = getFormData(form)
     var data = formData.data
 
+    // console.log(data)
+    if (data.name === '' || data.email === '' || data.message === '') {
+      alert('이름과 이메일, 내용을 확인하세요!')
+      return
+    }
+
     // If a honeypot field is filled, assume it was done so by a spam bot.
     if (formData.honeypot) {
       return false
